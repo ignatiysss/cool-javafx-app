@@ -1,6 +1,6 @@
 package com.ihnat.melnyk.mytermpaper.controllers;
 
-import com.ihnat.melnyk.mytermpaper.models.BaseMicroObject;
+import com.ihnat.melnyk.mytermpaper.implementations.micro.BaseMicroObject;
 import com.ihnat.melnyk.mytermpaper.util.Utility;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -7,6 +7,9 @@ module com.ihnat.melnyk.mytermpaper {
     opens com.ihnat.melnyk.mytermpaper.controllers to javafx.fxml;
     exports com.ihnat.melnyk.mytermpaper;
     exports com.ihnat.melnyk.mytermpaper.controllers;
-    exports com.ihnat.melnyk.mytermpaper.models;
-    exports com.ihnat.melnyk.mytermpaper.interfaces;
+    exports com.ihnat.melnyk.mytermpaper.implementations;
+    exports com.ihnat.melnyk.mytermpaper.implementations.micro;
+    exports com.ihnat.melnyk.mytermpaper.implementations.macro;
+    exports com.ihnat.melnyk.mytermpaper.interfaces.micro;
+    exports com.ihnat.melnyk.mytermpaper.interfaces.macro;
 }
