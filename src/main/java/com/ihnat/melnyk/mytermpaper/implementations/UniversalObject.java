@@ -13,7 +13,6 @@ import javafx.scene.input.KeyEvent;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class UniversalObject extends Scene {
     public static final UniversalObject instance = new UniversalObject(1600, 900);
@@ -37,18 +36,16 @@ public class UniversalObject extends Scene {
     private EventHandler<KeyEvent> keyEventHandler() {
         return keyEvent -> {
             switch (keyEvent.getCode()) {
-                case INSERT -> NewMicroObjectController.call(1, 2, consumer());
+                case INSERT -> NewMicroObjectController.call(this::processNewMicroObject);
                 case A -> {
                 }
             }
         };
     }
 
-    private Consumer<BaseMicroObject> consumer() {
-        return microObject -> {
-            nodes().add(microObject);
-            microObjects.add(microObject);
-        };
+    private void processNewMicroObject(BaseMicroObject microObject) {
+        nodes().add(microObject);
+        microObjects.add(microObject);
     }
 
     private Group group() {

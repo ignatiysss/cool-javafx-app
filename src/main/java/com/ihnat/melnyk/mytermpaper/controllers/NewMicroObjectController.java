@@ -1,6 +1,7 @@
 package com.ihnat.melnyk.mytermpaper.controllers;
 
 import com.ihnat.melnyk.mytermpaper.implementations.micro.BaseMicroObject;
+import com.ihnat.melnyk.mytermpaper.implementations.micro.ColonelImpl;
 import com.ihnat.melnyk.mytermpaper.util.Utility;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,10 +17,9 @@ public class NewMicroObjectController {
 
     private final Stage stage = new Stage();
 
-    private double x, y;
     private Consumer<BaseMicroObject> consumer;
 
-    public static void call(double x, double y, Consumer<BaseMicroObject> consumer) {
+    public static void call(Consumer<BaseMicroObject> consumer) {
         var loader = new FXMLLoader(Utility.viewURL("new-microobject-view.fxml"));
         VBox root;
         try {
@@ -30,8 +30,6 @@ public class NewMicroObjectController {
 
         var controller = (NewMicroObjectController) loader.getController();
 
-        controller.x = x;
-        controller.y = y;
         controller.consumer = consumer;
 
         controller.stage.setScene(new Scene(root));
@@ -44,7 +42,14 @@ public class NewMicroObjectController {
     private TextField text;
 
     @FXML
-    private void submit() {
+    private void create() {
+        consumer.accept(new ColonelImpl());
+
+        close();
     }
 
+    @FXML
+    private void close() {
+        stage.close();
+    }
 }

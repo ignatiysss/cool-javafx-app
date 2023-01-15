@@ -1,7 +1,7 @@
 package com.ihnat.melnyk.mytermpaper.interfaces.micro;
 
 public interface MicroObject {
-    void moveBy();
+    void autoMove();
 
     void moveBy(double x, double y);
 }
