@@ -1,6 +1,6 @@
 package com.ihnat.melnyk.mytermpaper;
 
-import com.ihnat.melnyk.mytermpaper.model.UniversalObject;
+import com.ihnat.melnyk.mytermpaper.models.UniversalObject;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

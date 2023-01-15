@@ -1,4 +1,4 @@
-package com.ihnat.melnyk.mytermpaper.model;
+package com.ihnat.melnyk.mytermpaper.models;
 
 import com.ihnat.melnyk.mytermpaper.interfaces.MicroObject;
 import javafx.scene.image.Image;

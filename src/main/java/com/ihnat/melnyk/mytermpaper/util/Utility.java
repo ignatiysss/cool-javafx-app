@@ -3,8 +3,9 @@ package com.ihnat.melnyk.mytermpaper.util;
 import com.ihnat.melnyk.mytermpaper.Main;
 import javafx.scene.image.Image;
 
-import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Objects;
 
 public class Utility {
@@ -12,10 +13,10 @@ public class Utility {
         return new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/" + resourceName)));
     }
 
-    public static File viewFile(String filename) {
+    public static URL viewURL(String filename) {
         try {
-            return new File(Objects.requireNonNull(Main.class.getResource("views/" + filename)).toURI());
-        } catch (URISyntaxException e) {
+            return Objects.requireNonNull(Main.class.getResource("views/" + filename)).toURI().toURL();
+        } catch (MalformedURLException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
