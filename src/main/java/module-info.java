@@ -1,15 +1,13 @@
-module com.ihnat.melnyk.mytermpaper {
+module ua.ignatiysss.cooljavafxapp {
     requires javafx.controls;
     requires javafx.fxml;
+    requires lombok;
 
-
-    opens com.ihnat.melnyk.mytermpaper to javafx.fxml;
-    opens com.ihnat.melnyk.mytermpaper.controllers to javafx.fxml;
-    exports com.ihnat.melnyk.mytermpaper;
-    exports com.ihnat.melnyk.mytermpaper.controllers;
-    exports com.ihnat.melnyk.mytermpaper.implementations;
-    exports com.ihnat.melnyk.mytermpaper.implementations.micro;
-    exports com.ihnat.melnyk.mytermpaper.implementations.macro;
-    exports com.ihnat.melnyk.mytermpaper.interfaces.micro;
-    exports com.ihnat.melnyk.mytermpaper.interfaces.macro;
+    opens ua.ignatiysss.cooljavafxapp to javafx.fxml;
+    opens ua.ignatiysss.cooljavafxapp.controllers to javafx.fxml;
+    exports ua.ignatiysss.cooljavafxapp;
+    exports ua.ignatiysss.cooljavafxapp.controllers;
+    exports ua.ignatiysss.cooljavafxapp.model.micro;
+    exports ua.ignatiysss.cooljavafxapp.model.macro;
+    exports ua.ignatiysss.cooljavafxapp.util;
 }
